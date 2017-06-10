@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CrudWithRealmApp"
+             x:Class="CrudWithRealmApp.MainPage"
+             xmlns:customersVm="clr-namespace:CrudWithRealmApp.ViewModels"
+             Title="Main Page">
+    <ContentPage.BindingContext>
+        <customersVm:CustomerViewModel/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout Padding="20">
+        <Button Text="List of Customers"
+                Command="{Binding NavToListCommand}"/>
+        <Button Text="Create Customer Details"
+                Command="{Binding NavToCreateCommand}"/>
+        <Button Text="Update or Delete Customer by Id"
+                Command="{Binding NavToUpdateDeleteCommand}"/>
+    </StackLayout>
+</ContentPage>
